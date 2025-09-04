@@ -80,7 +80,7 @@ http://127.0.0.1:5555/
 ## API Endpoints
 
 ### `GET /`
-Serves the frontend interface (`pages/index.html`).
+Serves the frontend interface (`assets/index.html`).
 
 ### `GET /generate`
 Generates a new temporary email.
