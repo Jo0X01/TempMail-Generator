@@ -10,9 +10,10 @@ RAPID_LINK = "https://rapidapi.com/calvinloveland335703-0p6BxLYIH8f/api/temp-mai
 TEMP_NEW_MAIL_API = "https://temp-mail44.p.rapidapi.com/api/v3/email/new"
 TEMP_READ_MAIL_API = "https://temp-mail44.p.rapidapi.com/api/v3/email/%s/messages"
 RAPID_API_KEYS = [
-    "14bL6wjGCpnjZ7NF6Y6wHbTVqobUFvDrDD1SRJLWQpwKRf7J", # 100
-    "73bf9805a4msh7ea2d4df7e80c66p1d6cb8jsnc953dcc4018e", # 200
-    "22595dcd2emsh02a3fa46b810f78p1cb4b2jsn97d14ad367c9"
+    # write ur custom apis here
+    "example1_73bf9805a4msh7ea2d4df7e80c66p1d6cb8jsnc953dcc4018e",
+    "example2_73bf9805a4msh7ea2d4df7e80c66p1d6cb8jsnc953dcc4018e",
+    "example3_73bf9805a4msh7ea2d4df7e80c66p1d6cb8jsnc953dcc4018e",
 ]
 KEY = 0
 TEMP_MAIL_HEADERS = {
@@ -72,4 +73,5 @@ def inbox():
 
 if __name__ == '__main__':
     webbrowser.open("http://127.0.0.1:5555/")
+
     app.run(debug=True,port=5555)
