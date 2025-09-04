@@ -46,6 +46,8 @@ pip install flask requests
 ```
 
 3. **Configure your RapidAPI keys**
+   
+To Obtain An API just access to [Temp Mail 44 API](https://rapidapi.com/calvinloveland335703-0p6BxLYIH8f/api/temp-mail44)
 
 In the Python code, edit:
 
@@ -113,7 +115,7 @@ Fetches inbox messages for the generated email.
 
 ## Frontend
 
-- Located in `pages/index.html`
+- Located in `assets/index.html`
 - Features a glassmorphic card design with gradient animations
 - Auto-refreshes inbox every 10 seconds
 - Supports copy-to-clipboard and keyboard shortcut (`C` key)
