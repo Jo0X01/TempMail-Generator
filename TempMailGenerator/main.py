@@ -1,6 +1,7 @@
 import hashlib
 import json
 import argparse
+import sys
 import webbrowser
 from flask import Flask, jsonify, request
 import requests
@@ -8,6 +9,7 @@ from pathlib import Path
 
 from TempMailGenerator.template import TEMPLATE
 
+OBTAIN_API_FROM = "https://rapidapi.com/calvinloveland335703-0p6BxLYIH8f/api/temp-mail44"
 CONFIG_PATH = Path("config.json")
 DEFAULT_CONFIG = {
     "rapid_api_keys": [
@@ -45,19 +47,31 @@ class Email:
 
     def read_inbox(self):
         response = requests.get(TEMP_READ_MAIL_API % self.EMAIL, headers=TEMP_MAIL_HEADERS)
+        try:
+            response.raise_for_status()
+        except Exception as e:
+            sys.exit(f"ReadInboxError: {e}")
         return response.json()
 
 Emails = []
 
 def generate_email():
     global KEY_INDEX
+    if API_KEYS[0].startswith("YOUR_API_KEY"):
+        sys.exit(f"First Time? Please Add UR API Key from : {OBTAIN_API_FROM}")
+    
     TEMP_MAIL_HEADERS['X-RapidAPI-Key'] = API_KEYS[KEY_INDEX]
     response = requests.post(TEMP_NEW_MAIL_API, headers=TEMP_MAIL_HEADERS)
+    try:
+        response.raise_for_status()
+    except Exception as e:
+        sys.exit(f"GenerateEmailError: {e}")
     data = response.json()
+
     if not data.get("email"):
         KEY_INDEX += 1
         if KEY_INDEX >= len(API_KEYS):
-            return data
+            return sys.exit(f"ResponseError : {data}")
         return generate_email()
     email_obj = Email(data['email'], data['token'])
     Emails.append(email_obj)
@@ -95,9 +109,9 @@ def main():
     if args.config:
         print("Current configuration:")
         print(json.dumps(config, indent=4))
-        key_list = input("Enter new API keys (comma separated) or leave empty to keep: ").strip()
+        key_list = input("Enter new API keys (space separated) or leave empty to keep: ").strip()
         if key_list:
-            config["rapid_api_keys"] = [k.strip() for k in key_list.split(",")]
+            config["rapid_api_keys"] = [k.strip() for k in key_list.split(" ")]
         new_host = input(f"API Host [{config['api_host']}]: ").strip()
         if new_host:
             config["api_host"] = new_host

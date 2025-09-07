@@ -309,9 +309,9 @@
             }, 1000);
         }
 
-        function generateEmail() {
+        async function generateEmail() {
             genBtn.style.display = "none";
-            fetch('/generate')
+            await fetch('/generate')
                 .then(res => res.json())
                 .then(data => {
                     emailInput.value = data.email;
