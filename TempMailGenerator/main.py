@@ -6,6 +6,8 @@ from flask import Flask, jsonify, request
 import requests
 from pathlib import Path
 
+from TempMailGenerator.template import TEMPLATE
+
 CONFIG_PATH = Path("config.json")
 DEFAULT_CONFIG = {
     "rapid_api_keys": [
@@ -63,7 +65,7 @@ def generate_email():
 
 @app.route('/')
 def index():
-    return open('./index.html', "rb").read().decode()
+    return TEMPLATE
 
 @app.route('/generate')
 def generate():

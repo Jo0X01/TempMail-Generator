@@ -2,7 +2,7 @@ from setuptools import setup
 
 __author__ = "JoOx01"
 __pkg_name__ = "TempMailGenerator"
-__version__ = "1.0.0"
+__version__ = "1.0.5"
 __desc__ = """A lightweight temporary email generator built with Flask (Python) and a modern frontend. It allows you to quickly generate disposable email addresses, view incoming messages, and refresh your inbox automatically."""
 
 with open('README.md', 'r', encoding='utf-8') as f:
