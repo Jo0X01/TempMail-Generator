@@ -81,6 +81,13 @@ temp-mail --config
 ## Usage
 
 ### Start the server (recommended way)
+
+```bash
+python -m TempMailGenerator
+```
+
+### OR
+
 ```bash
 temp-mail
 ```
