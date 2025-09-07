@@ -11,6 +11,8 @@
     <img src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge" alt="License: MIT">
   </a>
 </p>
+
+
 # Temp Mail Generator
 
 A lightweight **temporary email generator** built with Flask (Python) and a modern frontend. It allows you to quickly generate disposable email addresses, view incoming messages, and refresh your inbox automatically.
