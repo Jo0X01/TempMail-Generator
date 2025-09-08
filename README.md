@@ -105,7 +105,7 @@ temp-mail --host 0.0.0.0 --port 8080 --no-browser
 python main.py
 ```
 
-## Usage Python Code
+## Python Code
 
 ```bash
 import TempMailGenerator
