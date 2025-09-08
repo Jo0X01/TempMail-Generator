@@ -108,7 +108,8 @@ python main.py
 ## Python Code
 
 ```bash
-import TempMailGenerator
+
+from TempMailGenerator import TempMailGenerator
 mail = TempMailGenerator()
 
 # to configure the api
