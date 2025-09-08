@@ -123,41 +123,6 @@ json_inbox = temp_mail.read_inbox()
 # start server
 mail.start_server(True,"127.0.0.1",5555)
 ```
----
-
-## API Endpoints
-
-### `GET /`
-Serves the frontend interface (`./index.html`).
-
-### `GET /generate`
-Generates a new temporary email.
-
-Example Response:
-```json
-{
-  "email": "example@domain.com",
-  "token": "hash_token"
-}
-```
-
-### `GET /inbox?tk=<token>`
-Fetches inbox messages for the generated email.
-
-Example Response:
-```json
-{
-  "messages": [
-    {
-      "id": "msg123",
-      "from": "sender@example.com",
-      "subject": "Welcome!",
-      "body_text": "Hello World",
-      "created_at": "2025-09-04T10:00:00Z"
-    }
-  ]
-}
-```
 
 ---
 
