@@ -50,13 +50,13 @@ You can try the live demo here:
 
 ### From PyPI
 ```bash
-pip install TempMailGenerator
+pip install TempMail-Generator
 ```
 
 or
 
 ```bash
-pip3 install TempMailGenerator
+pip3 install TempMail-Generator
 ```
 
 ### From Source
@@ -86,7 +86,7 @@ temp-mail --config
 ### Start the server (recommended way)
 
 ```bash
-python -m TempMailGenerator
+python -m TempMail_Generator
 ```
 
 ### OR
