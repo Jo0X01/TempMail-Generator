@@ -22,7 +22,7 @@ A lightweight **temporary email generator** built with Flask (Python) and a mode
 ## Demo
 
 You can try the live demo here:  
-**[View Demo on GitHub](https://htmlpreview.github.io/?https://github.com/Jo0X01/TempMail-Generator/blob/main/TempMailGenerator/templates/index.html)**
+**[View Demo on GitHub](https://htmlpreview.github.io/?https://github.com/Jo0X01/TempMail-Generator/blob/main/TempMail_Generator/templates/index.html)**
 
 ---
 
