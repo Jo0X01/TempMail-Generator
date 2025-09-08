@@ -1,8 +1,8 @@
 from setuptools import setup
 
-__author__ = "JoOx01"
+__author__ = "Jo0x01"
 __pkg_name__ = "TempMail_Generator"
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __desc__ = """A lightweight temporary email generator built with Flask (Python) and a modern frontend. It allows you to quickly generate disposable email addresses, view incoming messages, and refresh your inbox automatically."""
 
 with open('README.md', 'r', encoding='utf-8') as f:
@@ -22,12 +22,12 @@ setup(
     install_requires=['flask', 'requests'],
     entry_points={
         'console_scripts': [
-            'temp-mail = TempMail_Generator.main:main',
-            'tmail = TempMail_Generator.main:main',
-            'create-mail = TempMail_Generator.main:main',
-            'generate-mail = TempMail_Generator.main:main',
-            'gt-mail = TempMail_Generator.main:main',
-            'gtmail = TempMail_Generator.main:main',
+            'temp-mail = TempMail_Generator.__main__:main',
+            'tmail = TempMail_Generator.__main__:main',
+            'create-mail = TempMail_Generator.__main__:main',
+            'generate-mail = TempMail_Generator.__main__:main',
+            'gt-mail = TempMail_Generator.__main__:main',
+            'gtmail = TempMail_Generator.__main__:main',
         ]
     },
     classifiers=[
