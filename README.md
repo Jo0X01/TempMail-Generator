@@ -4,7 +4,7 @@
   </a>
 </p>
 <p align="center">
-  <a href="https://pypi.org/project/TempMailGenerator/">
+  <a href="https://pypi.org/project/TempMail-Generator/">
     <img src="https://img.shields.io/badge/-PyPi-blue.svg?logo=pypi&labelColor=555555&style=for-the-badge" alt="PyPi">
   </a>
   <a href="https://github.com/Jo0X01/TempMail-Generator">
@@ -109,7 +109,7 @@ python main.py
 
 ```bash
 
-from TempMailGenerator import TempMailGenerator
+from TempMail_Generator import TempMailGenerator
 mail = TempMailGenerator()
 
 # to configure the api
