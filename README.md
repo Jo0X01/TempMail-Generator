@@ -22,7 +22,7 @@ A lightweight **temporary email generator** built with Flask (Python) and a mode
 ## Demo
 
 You can try the live demo here:  
-**[View Demo on GitHub](https://htmlpreview.github.io/?https://github.com/Jo0X01/TempMail-Generator/blob/main/TempMailGenerator/index.html)**
+**[View Demo on GitHub](https://htmlpreview.github.io/?https://github.com/Jo0X01/TempMail-Generator/blob/main/TempMailGenerator/templates/index.html)**
 
 ---
 
@@ -75,6 +75,9 @@ To edit your API keys and endpoints:
 temp-mail --config
 ```
 *(or `python main.py --config` if running from source)*
+### Note
+* by defualt if u add api keys via python code or via cli
+*  it will store them in temp_user_path/config.json
 
 ---
 
@@ -102,6 +105,24 @@ temp-mail --host 0.0.0.0 --port 8080 --no-browser
 python main.py
 ```
 
+## Usage Python Code
+
+```bash
+import TempMailGenerator
+mail = TempMailGenerator()
+
+# to configure the api
+api_list = ["api_key_1","api_key_2"]
+mail.add_api(api_list) 
+
+# just create temp mail
+temp_mail = mail.generate()
+# read inbox of created temp mail
+json_inbox = temp_mail.read_inbox()
+
+# start server
+mail.start_server(True,"127.0.0.1",5555)
+```
 ---
 
 ## API Endpoints
