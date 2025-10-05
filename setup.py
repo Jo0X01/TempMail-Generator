@@ -19,7 +19,7 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/jo0x01/TempMail-Generator',
     keywords=["tempmail", "tmail", "email", "mail", "temporary-email", "disposable-mail"],
-    install_requires=['flask','flask_core', 'requests'],
+    install_requires=['flask','flask-core', 'requests'],
     entry_points={
         'console_scripts': [
             'temp-mail = TempMail_Generator.__main__:main',
