@@ -1,7 +1,7 @@
 import json
 import argparse
 import webbrowser
-from .server import Backend,Config
+from TempMail_Generator.server import Backend,Config
 
 def main():
     parser = argparse.ArgumentParser(

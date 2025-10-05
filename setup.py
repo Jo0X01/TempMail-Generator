@@ -1,9 +1,10 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 __author__ = "Jo0x01"
 __pkg_name__ = "TempMail_Generator"
-__version__ = "1.0.1"
-__desc__ = """A lightweight temporary email generator built with Flask (Python) and a modern frontend. It allows you to quickly generate disposable email addresses, view incoming messages, and refresh your inbox automatically."""
+__version__ = "1.0.3"
+__desc__ = """A lightweight temporary email generator built with Flask (Python) and a modern frontend.
+It allows you to quickly generate disposable email addresses, view incoming messages, and refresh your inbox automatically."""
 
 with open('README.md', 'r', encoding='utf-8') as f:
     long_description = f.read()
@@ -11,7 +12,12 @@ with open('README.md', 'r', encoding='utf-8') as f:
 setup(
     name=__pkg_name__,
     version=__version__,
-    packages=[__pkg_name__],
+    packages=find_packages(),   # Use find_packages to automatically include subpackages
+    include_package_data=True,  # Include non-Python files specified in MANIFEST.in
+    package_data={
+        # Include all files in the templates folder inside your package
+        __pkg_name__: ["templates/*", "templates/**/*"],  
+    },
     license='MIT',
     description=__desc__,
     author=__author__,
@@ -38,5 +44,5 @@ setup(
         'License :: OSI Approved :: MIT License',
         "Operating System :: OS Independent",
     ],
-    python_requires='>=3.1',
+    python_requires='>=3.7',
 )

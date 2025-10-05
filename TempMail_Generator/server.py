@@ -1,9 +1,10 @@
 from flask import Flask, jsonify, render_template, request
 from flask_cors import CORS
-from .process import APIProcess, Config
+from TempMail_Generator.process import APIProcess, Config
+import pkg_resources
 
 class Backend:
-    APP = Flask(__name__, static_folder="static", template_folder="templates")
+    APP = Flask(__name__, static_folder="static", template_folder=pkg_resources.resource_filename('TempMail_Generator', 'templates'))
 
     def __init__(self):
         CORS(self.APP)

@@ -1,5 +1,5 @@
-from .server import Backend
-from .process import APIProcess,Config
+from TempMail_Generator.server import Backend
+from TempMail_Generator.process import APIProcess,Config
 
 
 class TempMailGenerator:

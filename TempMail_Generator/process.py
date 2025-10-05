@@ -1,6 +1,6 @@
 import hashlib
 import requests
-from .config import Config
+from TempMail_Generator.config import Config
 
 class Email:
     def __init__(self, email: str, token: str):
